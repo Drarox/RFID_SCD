@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".MenuST25DVDemoFragment" >
+
+    <RelativeLayout
+        android:id="@+id/ToolHeaderFragmentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:id="@+id/ToolRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ToolHeaderFragmentId" >
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/RLM24LRSpecificSectionScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:visibility="visible" >
+
+                <!-- Basic demos // -->
+
+                <LinearLayout
+                    android:id="@+id/ReadLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <Button
+                        android:id="@+id/BBasicRead"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:text="Basic Read " >
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/WriteLayout"
+                    android:layout_below="@+id/ReadLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <Button
+                        android:id="@+id/BBasicWrite"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:typeface="serif"
+                        android:text="Basic Write " >
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/FileTLayout"
+                    android:layout_below="@+id/WriteLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <Button
+                        android:id="@+id/BFileTransfer"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:typeface="serif"
+                        android:text=" Memory dump/load " >
+                    </Button>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/MailBoxTLayout"
+                    android:layout_below="@+id/FileTLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/BMailBoxTransfer"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:typeface="serif"
+                        android:text=" FTM Config/Transfers " >
+                    </Button>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/FTMFWUTLayout"
+                    android:layout_below="@+id/MailBoxTLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/BFTMFWUTransfer"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:typeface="serif"
+                        android:text=" Firmware Update " >
+                    </Button>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/FTMImageTLayout"
+                    android:layout_below="@+id/FTMFWUTLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/BFTMImageTransfer"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:typeface="serif"
+                        android:text=" Picture Transfers " >
+                    </Button>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/FTMChronoTLayout"
+                    android:layout_below="@+id/FTMImageTLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone">
+                    <Button
+                        android:id="@+id/BFTMChronoTransfer"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/relative_selector"
+                        android:typeface="serif"
+                        android:text=" Stopwatch Transfers " >
+                    </Button>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/FootNoteTxtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/version_txt_size"
+        android:textStyle="normal"
+        android:typeface="serif" />
+
+</RelativeLayout>

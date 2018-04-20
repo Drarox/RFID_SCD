@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".MenuSYSFileFragment" >
+
+    <RelativeLayout
+        android:id="@+id/SYSFileFragTagHeaderFragmentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <!-- "Not available" text view -->
+
+    <TextView
+        android:id="@+id/SYSFileFragNotAvailableId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/SYSFileFragTagHeaderFragmentId"
+        android:layout_marginTop="@dimen/ti_act_add_txt_top_margin"
+        android:text="@string/msf_frag_not_avail_txt"
+        android:textSize="@dimen/mcf_frag_not_avail_txt_size"
+        android:typeface="serif" />
+
+    <!-- "Available" Relative Layout: includes all other fields -->
+
+    <RelativeLayout
+        android:id="@+id/SYSFileFragAvailFileRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SYSFileFragTagHeaderFragmentId"
+        android:layout_marginTop="@dimen/ti_act_add_txt_top_margin" >
+
+        <!-- SYS File Length -->
+
+        <RelativeLayout
+            android:id="@+id/SYSFileFragSYSLgthAreaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/SYSFileFragSYSLgthHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/all_act_SYSLEN_header_txt"
+                android:textSize="@dimen/ti_act_add_txt_header_size"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/SYSFileFragSYSLgthFieldId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/SYSFileFragSYSLgthHeaderId"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                android:textSize="@dimen/ti_act_add_txt_field_size"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/SYSFileProdspecificLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SYSFileFragSYSLgthAreaId" >
+
+            <!-- I2C protect -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragI2CProtectAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragI2CProtectHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_i2c_protect_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragI2CProtectFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SYSFileFragI2CProtectHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+
+            <!-- I2C watchdog -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragI2CWatchdogAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SYSFileFragI2CProtectAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragI2CWatchdogHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_i2c_watchdog_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragI2CWatchdogFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SYSFileFragI2CWatchdogHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+
+            <!-- GPO -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragGPOAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SYSFileFragI2CWatchdogAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragGPOHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_gpo_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragGPOFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SYSFileFragGPOHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+            <!-- Event Counter Config For SRTAG2KL Product Only -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragEventCounterConfigAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SYSFileFragGPOAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragEventCounterConfigHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_counter_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragEventCounterConfigFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/SYSFileFragEventCounterConfigHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragEventCounterValueAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SYSFileFragEventCounterConfigAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragEventCounterValueHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_counter_value_context_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragEventCounterValueFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/SYSFileFragEventCounterValueHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+
+            <!-- Wire power management -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragWirePwrMngAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SYSFileFragGPOAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragWirePwrMngHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_wire_pwr_mng_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragWirePwrMngFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SYSFileFragWirePwrMngHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+
+            <!-- RF enable -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragRFEnableAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SYSFileFragWirePwrMngAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragRFEnableHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_rf_enable_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragRFEnableFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SYSFileFragRFEnableHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+
+                <RelativeLayout
+                    android:id="@+id/SYSFileFragRFEnableAreaId1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/SYSFileFragRFEnableHeaderId"
+                    android:layout_marginLeft="@dimen/all_act_tab_left_margin" >
+
+                    <!-- RF field activation -->
+
+                    <TextView
+                        android:id="@+id/SYSFileFragRFEnableFieldActHeaderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/msf_frag_rf_enable_field_on_header_txt"
+                        android:textSize="@dimen/ti_act_add_txt_header_size"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/SYSFileFragRFEnableFieldActFieldId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/SYSFileFragRFEnableFieldActHeaderId"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                        android:textSize="@dimen/ti_act_add_txt_field_size"
+                        android:typeface="serif" />
+
+                    <!-- RF disable pad state -->
+
+                    <TextView
+                        android:id="@+id/SYSFileFragRFEnableDisPadStateHeaderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/SYSFileFragRFEnableFieldActHeaderId"
+                        android:text="@string/msf_frag_rf_enable_dis_pad_state_header_txt"
+                        android:textSize="@dimen/ti_act_add_txt_header_size"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/SYSFileFragRFEnableDisPadStateFieldId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/SYSFileFragRFEnableDisPadStateHeaderId"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                        android:textSize="@dimen/ti_act_add_txt_field_size"
+                        android:typeface="serif" />
+
+                    <!-- RF interface commands decoding -->
+
+                    <TextView
+                        android:id="@+id/SYSFileFragRFEnableCmdDecHeaderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/SYSFileFragRFEnableDisPadStateHeaderId"
+                        android:text="@string/msf_frag_rf_enable_cmd_dec_header_txt"
+                        android:textSize="@dimen/ti_act_add_txt_header_size"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/SYSFileFragRFEnableCmdDecFieldId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/SYSFileFragRFEnableCmdDecHeaderId"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                        android:textSize="@dimen/ti_act_add_txt_field_size"
+                        android:typeface="serif" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- NDEF Files number -->
+
+            <RelativeLayout
+                android:id="@+id/SYSFileFragNDEFFilesNbAreaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SYSFileFragRFEnableAreaId" >
+
+                <TextView
+                    android:id="@+id/SYSFileFragNDEFFilesNbHeaderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/msf_frag_ndef_files_nb_header_txt"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/SYSFileFragNDEFFilesNbFieldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/SYSFileFragNDEFFilesNbHeaderId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                    android:textSize="@dimen/ti_act_add_txt_field_size"
+                    android:typeface="serif" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- UID -->
+
+        <RelativeLayout
+            android:id="@+id/SYSFileFragUIDAreaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SYSFileProdspecificLayout" >
+
+            <TextView
+                android:id="@+id/SYSFileFragUIDHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/msf_frag_uid_header_txt"
+                android:textSize="@dimen/ti_act_add_txt_header_size"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/SYSFileFragUIDFieldId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/SYSFileFragUIDHeaderId"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                android:textSize="@dimen/ti_act_add_txt_field_size"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+        <!-- Memory Size -->
+
+        <RelativeLayout
+            android:id="@+id/SYSFileFragMemSizeAreaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SYSFileFragUIDAreaId" >
+
+            <TextView
+                android:id="@+id/SYSFileFragMemSizeHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/msf_frag_mem_size_header_txt"
+                android:textSize="@dimen/ti_act_add_txt_header_size"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/SYSFileFragMemSizeFieldId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/SYSFileFragMemSizeHeaderId"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                android:textSize="@dimen/ti_act_add_txt_field_size"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+        <!-- Product Code -->
+
+        <RelativeLayout
+            android:id="@+id/SYSFileFragProdCodeAreaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SYSFileFragMemSizeAreaId" >
+
+            <TextView
+                android:id="@+id/SYSFileFragProdCodeHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/msf_frag_prod_code_header_txt"
+                android:textSize="@dimen/ti_act_add_txt_header_size"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/SYSFileFragProdCodeFieldId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/SYSFileFragProdCodeHeaderId"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                android:textSize="@dimen/ti_act_add_txt_field_size"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+        <!-- SRTAG2KL + ST25TA02K -->
+
+        <RelativeLayout
+            android:id="@+id/SYSFileFragProductVersionAreaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SYSFileFragProdCodeAreaId" >
+
+            <TextView
+                android:id="@+id/SYSFileFragProductVersionHeaderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/msf_frag_product_version_header_txt"
+                android:textSize="@dimen/ti_act_add_txt_header_size"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/SYSFileFragProductVersionFieldId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/SYSFileFragProductVersionHeaderId"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/mcf_frag_field_left_margin"
+                android:textSize="@dimen/ti_act_add_txt_field_size"
+                android:typeface="serif" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/FootNoteTxtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/version_txt_size"
+        android:textStyle="normal"
+        android:typeface="serif" />
+
+</RelativeLayout>

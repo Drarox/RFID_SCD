@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NDEFWifiHandoverFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".NDEFWifiHandoverFragment" >
+	
+
+    <RelativeLayout
+        android:id="@+id/NDEFWifiHandoverSSIDRLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    
+    <TextView
+		android:id="@+id/MnrSSIDTxtId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:typeface="serif"
+        android:textStyle="bold"
+		android:text="Network SSID:"
+		android:textSize="@dimen/mnr_header_txt_size" />
+    
+    	<Spinner
+	    android:id="@+id/NDEFWifiSSIDSpinnerId"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/MnrSSIDTxtId" />
+	
+    <EditText
+        android:id="@+id/NDEFWidiTHandoverFragmentSSIDId"
+        android:layout_below="@id/MnrSSIDTxtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cfe7f5"
+        android:textColor="@color/dark_gray"
+        android:inputType="text"
+        android:lines="1"
+        android:visibility="gone"/>
+    
+	<CheckBox android:id="@+id/checkbox_BroadcastSSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Broadcast SSID"
+        android:layout_below="@id/NDEFWidiTHandoverFragmentSSIDId"
+        android:onClick="onBroadcastClicked"
+        android:visibility="gone"/>
+         
+  </RelativeLayout>  
+  
+
+  <RelativeLayout 
+    android:id="@+id/authTypeRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/NDEFWifiHandoverSSIDRLayoutId"
+    android:orientation="vertical">
+
+  	<TextView
+	android:id="@+id/authTypeTxt"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:typeface="serif"
+    android:textStyle="bold"
+	android:text="Authentication Type:"
+	android:textSize="@dimen/mnr_header_txt_size" />
+         
+	<Spinner
+	    android:id="@+id/authTypeList"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/authTypeTxt"
+	    android:layout_alignParentRight="true"
+	    android:background="#cfe7f5"
+	    android:textColor="@color/dark_gray"
+	    android:entries="@array/wifi_security"/>
+	
+	<TextView
+	android:id="@+id/encrTypeTxt"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:typeface="serif"
+    android:textStyle="bold"
+    android:layout_below="@id/authTypeList"
+	android:text="Encryption Type:"
+	android:textSize="@dimen/mnr_header_txt_size" />
+	
+	<Spinner
+	    android:id="@+id/encrTypeList"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/encrTypeTxt"
+	    android:layout_alignParentRight="true"
+	    android:background="#cfe7f5"
+	    android:textColor="@color/dark_gray"
+	    android:entries="@array/wifi_encryptionType"/>
+	
+	<TextView
+		android:id="@+id/netKeyTxtV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:typeface="serif"
+	    android:textStyle="bold"
+	    android:layout_below="@id/encrTypeList"
+		android:text="Network Key:"
+		android:textSize="@dimen/mnr_header_txt_size" />
+		
+
+    <EditText
+       android:id="@+id/netKeyTxt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/netKeyTxtV"
+       android:layout_alignParentRight="true"
+       android:background="#cfe7f5"
+       android:textColor="@color/dark_gray"
+       android:inputType="text"
+       android:lines="1" />
+    
+    <CheckBox
+       android:id="@+id/NDEFWifiCheckboxViewPasswordId"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/netKeyTxt"
+       android:text="Show Key"
+       android:onClick="onViewKeyClicked"
+       android:visibility="gone"/>
+    
+    </RelativeLayout>
+</RelativeLayout>

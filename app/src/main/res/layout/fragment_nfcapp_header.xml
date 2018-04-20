@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NFCAppHeaderFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+	android:background="@color/st_dark_blue"
+    tools:context="com.st.NFC.NFCAppHeaderFragment" >
+
+<!--	android:layout_marginLeft="@dimen/NFC_app_header_left_margin"-->
+
+	<TextView
+        android:id="@+id/NFCAppHeaderTxtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:typeface="serif"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/NFC_app_header_txt_size" />
+<!--	android:layout_toRightOf="@+id/NfcAppHeaderSTImgId"
+	android:layout_marginLeft="@dimen/NFC_app_header_img_left_margin"-->
+	<ImageView
+	    android:id="@+id/NfcAppHeaderImgId"
+	    android:contentDescription="@string/nfc_app_header_img_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:padding="@dimen/activity_horizontal_margin"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+	    android:layout_toRightOf="@+id/NFCAppHeaderTxtId"
+        android:layout_marginLeft="@dimen/NFC_app_header_img_left_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd"
+        android:maxWidth="@dimen/NFC_app_header_img_max_width_reduced"
+        android:maxHeight="@dimen/NFC_app_header_img_max_height_reduced"
+        android:visibility="gone" />
+
+</RelativeLayout>

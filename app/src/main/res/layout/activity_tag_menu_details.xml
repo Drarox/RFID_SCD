@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TagMenuDetailsActivityId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bckgnd"
+    tools:context="com.st.demo.TagMenuDetailsActivity" >
+
+    <fragment
+        android:name="com.st.NFC.NFCAppHeaderFragment"
+        android:id="@+id/TmdActNFCAppHeaderFragmentId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true" />
+
+	<RelativeLayout
+	    android:id="@+id/TmdActPagerRelLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/TmdActNFCAppHeaderFragmentId"
+	>
+<!--		android:layout_alignParentTop="true"
+		android:layout_marginTop="@dimen/activity_vertical_offset_header_start_display"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:paddingTop="@dimen/activity_vertical_margin"-->
+		<!--	    android:layout_marginTop="@dimen/tmd_act_pager_top_margin"-->
+		<android.support.v4.view.ViewPager
+		    android:id="@+id/pager"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    tools:context="com.st.demo.TagMenuDetailsActivity" >
+
+<!--
+		    		    This title strip will display the currently visible page title, as well as the page
+		    titles for adjacent pages.
+	
+
+		    <android.support.v4.view.PagerTitleStrip
+		        android:id="@+id/pager_title_strip"
+		        android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+		        android:layout_gravity="top"
+        		android:background="#cfe7f5"
+		        android:paddingBottom="4dp"
+        		android:paddingTop="4dp"
+        		android:textStyle="bold"
+		        android:textColor="@color/black" />
+-->
+			<!--
+		        android:layout_gravity="top"
+-->
+		     <android.support.v4.view.PagerTabStrip
+		        android:id="@+id/pager_tab_strip"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+
+		        android:background="#cfe7f5"
+		        android:paddingBottom="4dp"
+        		android:paddingTop="4dp"
+        		android:textStyle="bold"
+		        android:textColor="@color/black" />
+
+		     
+		</android.support.v4.view.ViewPager>
+
+		<RelativeLayout
+		    android:id="@+id/layoutPageIndicator"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentRight="true"
+		    android:gravity="center|bottom"
+		    android:minHeight="20dp"
+		    android:minWidth="20dp"
+		    android:paddingBottom="10dp">
+		
+		<com.st.Fragments.PageIndicator
+		    android:id="@+id/pageIndicator"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:minHeight="20dp"
+		    android:minWidth="20dp"
+		    android:paddingBottom="6dp"
+		    android:paddingTop="6dp" />
+		</RelativeLayout>	
+		<!-- 
+				<RelativeLayout
+		    android:id="@+id/layoutuserhelper"
+		    android:layout_width="match_parent"
+		    android:layout_height="20dp"
+		    android:windowBackground="@android:color/transparent"
+		    android:layout_alignParentBottom="true"
+		    android:gravity="center|bottom"
+		   	android:minHeight="20dp"
+			android:minWidth="20dp"
+			android:paddingBottom="6dp"
+			android:paddingTop="4dp" >
+		     
+		<ImageView
+	    android:id="@+id/leftnavuserhelper"
+	    android:layout_width="20dp"
+	    android:layout_height="20dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+	    android:src="@drawable/empty_helper" />
+		
+		<ImageView
+	    android:id="@+id/rightnavuserhelper"
+	    android:layout_width="20dp"
+	    android:layout_height="20dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+	    android:src="@drawable/empty_helper" />			
+		</RelativeLayout>
+		 -->
+		</RelativeLayout>
+		
+
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/activity_vertical_margin"
+		android:layout_marginRight="@dimen/activity_horizontal_margin"
+		android:layout_marginTop="@dimen/activity_vertical_margin"
+		android:layout_marginLeft="@dimen/activity_horizontal_margin" >
+
+	    <include layout="@layout/view_application_version" />
+
+	
+	</RelativeLayout>
+	
+</RelativeLayout>
+

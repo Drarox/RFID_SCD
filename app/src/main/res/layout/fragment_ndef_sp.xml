@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentNdefSp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+	<ScrollView
+	    android:id="@+id/rllistndefmsg"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="match_parent"
+	    android:layout_marginBottom="@dimen/ti_act_add_txt_top_margin">
+    
+		<RelativeLayout
+		    android:id="@+id/fragmentNdefSpList"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent">
+	    	
+		    <TextView
+			android:id="@+id/LabelTxtId1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:typeface="serif"
+	        android:textStyle="bold"
+			android:text="Description:"
+			android:visibility="invisible"
+			android:textSize="@dimen/mnr_header_txt_size"/>
+			
+		    <FrameLayout
+		        	android:id="@+id/frSmartViewId1"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+				    android:layout_marginTop="@dimen/mnf_frag_NDEF_rec_top_margin"
+				    android:layout_below="@id/LabelTxtId1" />
+		    
+			<TextView
+			android:id="@+id/LabelTxtId2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:typeface="serif"
+	        android:textStyle="bold"
+			android:text="Content :"
+			android:visibility="invisible"
+			android:textSize="@dimen/mnr_header_txt_size"
+			android:layout_below="@id/frSmartViewId1" />
+			
+		   	<FrameLayout
+			       	android:id="@+id/frSmartViewId2"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+				    android:layout_marginTop="@dimen/mnf_frag_NDEF_rec_top_margin" 
+				    android:layout_below="@id/LabelTxtId2"/>
+		   	
+		    <TextView
+			android:id="@+id/LabelTxtId3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:typeface="serif"
+	        android:textStyle="bold"
+			android:text="Content :"
+			android:visibility="invisible"
+			android:textSize="@dimen/mnr_header_txt_size"
+			android:layout_below="@id/frSmartViewId2" />
+		   	
+		   <FrameLayout
+			       	android:id="@+id/frSmartViewId3"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_alignParentLeft="true"
+				    android:layout_marginTop="@dimen/mnf_frag_NDEF_rec_top_margin" 
+				    android:layout_below="@id/LabelTxtId3"/>
+		</RelativeLayout>   
+	</ScrollView>
+	
+</RelativeLayout>    

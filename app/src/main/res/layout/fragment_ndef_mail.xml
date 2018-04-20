@@ -1,0 +1,99 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NDEFMailFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NDEFMailFragment" >
+
+    <RelativeLayout
+        android:id="@+id/rlmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+    <RelativeLayout
+        android:id="@+id/rlcontactId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+    
+    	<TextView
+        	android:id="@+id/contactTvId"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Contact"/>
+        
+		<EditText
+		    android:id="@+id/contactEtId"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/contactTvId"
+		    android:background="#cfe7f5"
+		    android:gravity="top"
+		    android:imeOptions="actionDone"
+		    android:inputType="textCapSentences|textAutoCorrect|textEmailAddress"
+		    android:maxLines="3"
+		    android:textColor="@color/dark_gray" />
+	</RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/rlsubjectId"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/rlcontactId"
+	    android:layout_marginBottom="20dp"
+	    android:orientation="horizontal" >
+    
+    	<TextView
+        	android:id="@+id/subjectTvId"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Subject"/>
+        
+		<EditText
+		    android:id="@+id/subjectEtId"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/subjectTvId"
+		    android:background="#cfe7f5"
+		    android:gravity="top"
+		    android:imeOptions="actionDone"
+		    android:inputType="text|textCapSentences|textAutoCorrect|textEmailSubject"
+		    android:maxLines="3"
+		    android:textColor="@color/dark_gray" />
+	</RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/rlmailmsgId"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/rlsubjectId"
+	    android:orientation="horizontal" >
+    
+    	<TextView
+        	android:id="@+id/mailmsgTvId"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Message"/>
+        
+		<EditText
+		    android:id="@+id/mailmsgEtId"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/mailmsgTvId"
+		    android:background="#cfe7f5"
+		    android:gravity="top"
+		    android:imeOptions="actionDone"
+		    android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+		    android:lines="10"
+		    android:maxLines="15"
+		    android:minLines="10"
+		    android:textColor="@color/dark_gray"/>
+
+	</RelativeLayout>
+    
+        
+    </RelativeLayout>
+        
+</FrameLayout>

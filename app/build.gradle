@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.st.demo"
+        minSdkVersion 16
+        targetSdkVersion 18
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    task generate_javadoc(overwrite: true, dependsOn: build) {
+        setDescription('Generates Javadoc API documentation with UMLGraph diagrams')
+        setGroup(JavaBasePlugin.DOCUMENTATION_GROUP)
+
+        doLast {
+            def javaFilePath = file('src/main/java')
+            if (javaFilePath.exists()) {
+                ant.javadoc(classpath: "UmlGraph.jar",
+                        sourcepath: file('./src/main/java'),
+                        packagenames: '*',
+                        destdir: "../build/javadoc/",
+                        private: 'true',
+                        docletpath: 'UmlGraph.jar',
+                        charset: 'UTF-8',
+                        encoding: 'UTF-8',
+                        docencoding: 'UTF-8') {
+                    doclet(name: 'org.umlgraph.doclet.UmlGraphDoc')
+                            {
+                                param(name: '-inferrel')
+                                param(name: '-inferdep')
+                                param(name: '-qualify')
+                                param(name: '-postfixpackage')
+                                param(name: '-hide', value: 'java.*')
+                                param(name: '-collpackages', value: 'java.util.*')
+                                param(name: '-nodefontsize', value: '9')
+                                param(name: '-nodefontpackagesize', value: '7')
+                                param(name: '-link', value: 'http://java.sun.com/j2se/1.5.0/docs/guide/javadoc/doclet/spec')
+                                param(name: '-link', value: 'http://java.sun.com/j2se/1.5/docs/api')
+                            }
+                }
+            } else {
+                print("!!! Cannot find source path !!!");
+            }
+        }
+    }
+
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/androidplot-core-0.6.0.jar')
+
+
+    // JUnit for Unit tests
+    testCompile 'junit:junit:4.12'
+    // Optional -- Mockito framework
+    //testCompile 'org.mockito:mockito-core:1.10.19'
+
+
+    // JUnit for instrumented tests
+    androidTestCompile 'junit:junit:4.12'
+    // Optional -- Hamcrest library
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test:rules:0.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+
+    // add this for intent mocking support
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2'
+}
+android {
+    lintOptions {
+        abortOnError false
+    }
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Menu NDEF File fragment strings -->
+    <string name="mnf_frag_NDEF_msg_header_txt">NDEF message #</string>
+    <string name="mnf_frag_NDEF_rec_header_txt">NDEF record #</string>
+    <string name="mnf_frag_NDEF_NLEN_header_txt">NLEN (NDEF file length):</string>
+    <string name="mnf_frag_NDEF_NLEN_suffix_txt">bytes</string>
+    <string name="mnf_frag_read_tag_btn_txt">Read from tag</string>
+    <string name="mnf_frag_read_menu_btn_txt">NDEF details</string>
+    <string name="mnf_frag_write_tag_btn_txt">Write to tag</string>
+    <string name="mnf_frag_send_email_btn_txt">Send Email</string>
+    
+    <string name="mnf_frag_add_rec_txt">Add Record</string>
+    <string name="mnf_frag_write_menu_btn_txt">NDEF editor</string>
+    <string name="mnf_frag_launch_action_btn_txt">Start</string>
+    <string name="mnf_frag_connect_action_btn_txt">Connect</string>
+    <string name="mnf_frag_NDEF_rec_MB_header_txt">MB (Message Begin):</string>
+    <string name="mnf_frag_NDEF_rec_ME_header_txt">ME (Message End):</string>
+    <string name="mnf_frag_NDEF_rec_CF_header_txt">CF (Chunk Flag):</string>
+    <string name="mnf_frag_NDEF_rec_SR_header_txt">SR (Short Record):</string>
+    <string name="mnf_frag_NDEF_rec_IL_header_txt">IL (ID-Length presence):</string>
+    <string name="mnf_frag_NDEF_rec_TNF_header_txt">TNF (Type Name Format):</string>
+    <string name="mnf_frag_NDEF_rec_TLgth_header_txt">Type Length:</string>
+    <string name="mnf_frag_NDEF_rec_PLgth_header_txt">Payload Length:</string>
+    <string name="mnf_frag_NDEF_rec_IDLength_header_txt">ID Length:</string>
+    <string name="mnf_frag_NDEF_rec_Type_header_txt">Type:</string>
+    <string name="mnf_frag_NDEF_rec_ID_header_txt">ID:</string>
+    <string name="mnf_frag_NDEF_rec_Payload_header_txt">Payload:</string>    
+
+    	<string name="mnf_frag_NDEF_rec_type_empty"></string>
+	<string name="mnf_frag_NDEF_rec_type_txt">Text</string>
+	<string name="mnf_frag_NDEF_rec_type_uri">URI</string>
+	<string name="mnf_frag_NDEF_rec_type_bt_handover">BT Handover</string>
+    <string name="mnf_frag_NDEF_rec_type_bt_le">BT Low Energy</string>
+	<string name="mnf_frag_NDEF_rec_type_wifi_handover">Wifi Handover</string>
+	<string name="mnf_frag_NDEF_rec_type_smartposter">SmartPoster</string>
+	<string name="mnf_frag_NDEF_rec_type_telnb">Telephone number</string>
+	<string name="mnf_frag_NDEF_rec_type_sms">SMS</string>
+	<string name="mnf_frag_NDEF_rec_type_mail">Mail</string>
+	<string name="mnf_frag_NDEF_rec_type_sp">Smart Poster</string>
+	<string name="mnf_frag_NDEF_rec_type_vcard">vCard</string>
+	<string name="mnf_frag_NDEF_rec_type_m24srDiscoveryCtrl">discoCtrl</string>
+	<string name="mnf_frag_NDEF_rec_type_wifipair">WiFi pairing parameters</string>
+	<string name="mnf_frag_NDEF_rec_type_geoloc">Geo location ?</string>
+	<string name="mnf_frag_NDEF_rec_type_aar">AAR</string>
+	<string name="mnf_frag_NDEF_rec_type_proprietary">Proprietary (binary)</string>
+	<string name="mnf_frag_NDEF_rec_type_Candy">Byte Message</string>
+	<string name="mnf_frag_NDEF_rec_type_TranspCandy">Transp Byte Message</string>
+				
+    <string name="mnf_frag_NDEF_rec_types_header">NDEF message type:</string>
+    <string name="mnf_no_ndef_data_txt">No NDEF data for this tag</string>
+    
+    <!-- MIME types -->
+    <string name="mime_type_text_vcard">text/vcard</string>
+    <string name="mime_type_text_vcard_deprecated1">text/x-vCard</string>
+    <string name="mime_type_text_vcard_deprecated2">text/x-vcard</string>
+    <string name="mime_type_bt_handover">application/vnd.bluetooth.ep.oob</string>
+    <string name="mime_type_bt_le">application/vnd.bluetooth.le.oob</string>
+    <string name="mime_type_wifi_handover">application/vnd.wfa.wsc</string>
+    
+     <!-- 
+    <string name="app_name">VCardTest</string>
+    <string name="action_settings">Settings</string>
+    -->
+    
+     
+        <!-- Discovery Kit Control string -->
+    <string name="ledid">Led ID</string>
+    <string name="ledstatus">Initial\nState</string>
+    <string name="blinkspeed">Blinking</string>
+    
+    
+    <string name="ledid1">1</string>
+    <string name="ledid2">2</string>
+    <string name="ledid3">3</string>
+    <string name="ledid4">4</string>
+  
+    <string name="labelline1">Date:</string>
+    <string name="labelline2">Operator:</string>
+    <string name="labelline3">Led Speed:</string>
+    <string name="labelline4">Max Operating Range:</string>
+    <string name="labelline5">Value:</string>
+    <string name="labelline6">Unit:</string>
+    <string name="labelline7">Status</string>
+    <string name="labelline8"></string>  
+
+    <string name="edit_line1"></string>
+    <string name="edit_line2"></string>
+    <string name="edit_line3"></string>
+    <string name="edit_line4"></string>
+    <string name="edit_line5"></string>
+    <string name="edit_line6"></string>
+    <string name="edit_line7"></string>
+    <string name="edit_line8"></string>    
+    
+    <string name="button_text">GetContact</string>
+    <string name="name_hint">Someone</string>
+    <string name="email_hint">someone@somewhere.com</string>
+    <string name="SPAddr_hint">Structured Postal Address</string>
+    <string name="number_hint">00 00 00 00 00</string>
+    <string name="website_hint">""</string>
+    <string name="buttonExportVCard_text">Export VCard</string>
+    
+
+    
+    <!-- NFC Activity strings -->
+    <string name="nfc_act_new_tag_reading">New tag detected, read ongoing&#8230;</string>
+    <string name="nfc_act_tag_writing">Writing NDEF to tag&#8230;</string>
+    <string name="nfc_act_tag_wait_for_Tapping">Tap a Tag close to your phone&#8230;</string>
+
+    <!-- Write button view dimension -->
+    <dimen name="mnr_header_txt_size">22dp</dimen>
+    
+</resources>

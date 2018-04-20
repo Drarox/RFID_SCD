@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+        <!-- Application header dimensions -->
+    <dimen name="NFC_app_header_txt_size">25sp</dimen>
+    <!-- Application header dimensions -->
+    <dimen name="NFC_app_header_left_margin">80dp</dimen>
+    <dimen name="NFC_app_header_img_left_margin">10dp</dimen>
+    <dimen name="NFC_app_header_img_max_width">60dp</dimen>
+    <dimen name="NFC_app_header_img_max_height">60dp</dimen>
+
+    <dimen name="NFC_app_header_img_max_width_reduced">40dp</dimen>
+    <dimen name="NFC_app_header_img_max_height_reduced">40dp</dimen>
+
+    <!-- ST toast dimensions -->
+    <dimen name="st_toast_img_max_width">20dp</dimen>
+    <dimen name="st_toast_img_max_height">20dp</dimen>
+    <dimen name="st_toast_txt_left_margin">20dp</dimen>
+    <dimen name="st_toast_bottom_margin">150dp</dimen>
+    <dimen name="st_toast_txt_size">20sp</dimen>   
+    
+    <!-- Menu NDEF File fragment dimensions -->
+    <dimen name="NDEF_message_top_margin">10dp</dimen>
+    <dimen name="mnf_frag_NDEF_msg_btn_width">18dp</dimen>
+    <dimen name="mnf_frag_NDEF_msg_btn_height">12dp</dimen>
+    <dimen name="mnf_frag_NDEF_rec_top_margin">5dp</dimen>
+    <dimen name="mnf_frag_NDEF_rec_left_margin">10dp</dimen>
+    <dimen name="mnf_frag_NDEF_rec_bottom_margin">0dp</dimen>
+    <dimen name="mnf_frag_NDEF_rec_right_margin">0dp</dimen>
+    <!-- Read button view dimension -->
+    <dimen name="mnf_frag_read_btn_left_margin">20dp</dimen>
+    <dimen name="mnf_frag_read_btn_bottom_margin">20dp</dimen>
+    <!-- Write button view dimension -->
+    <dimen name="mnf_frag_write_btn_right_margin">20dp</dimen>
+    <dimen name="mnf_frag_write_btn_bottom_margin">20dp</dimen>
+    
+    <dimen name="mnw_frag_NDEF_msg_header_field_size">12dp</dimen>
+    <dimen name="mnw_frag_NDEF_msg_nb_field_size">12dp</dimen>
+
+    
+	<!-- Tag info activity add text view dimension -->
+    <dimen name="ti_act_add_txt_top_margin">10dp</dimen>
+    <dimen name="ti_act_add_txt_field_left_margin">5dp</dimen>
+
+    <!-- Tag info activity ndef area & text view dimension -->
+    <dimen name="ti_act_ndef_area_top_margin">20dp</dimen>
+    <dimen name="ti_act_ndef_area_bottom_margin">20dp</dimen>
+    
+    <!-- Tag info activity Tap button view dimension -->
+    <dimen name="ti_act_tap_btn_left_margin">20dp</dimen>
+    <dimen name="ti_act_tap_btn_bottom_margin">20dp</dimen>
+    
+    <!-- Tag info activity Menu button view dimension -->
+    <dimen name="ti_act_menu_btn_right_margin">20dp</dimen>
+    <dimen name="ti_act_menu_btn_bottom_margin">20dp</dimen>    
+    
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="activity_vertical_offset_header_start_display">55dp</dimen>
+
+	<!-- Tag header dimensions -->
+    <dimen name="tag_header_top_margin">20dp</dimen>
+    <dimen name="tag_header_txt_top_margin">10dp</dimen>
+    <dimen name="tag_header_tail_top_margin">5dp</dimen>
+    <dimen name="tag_header_tail_bottom_margin">10dp</dimen>
+    <dimen name="tag_header_tail_size">10dp</dimen>
+
+    
+    <!--  Basic button sizes -->
+	<dimen name="basic_button_max_width">125dp</dimen>
+	<dimen name="basic_button_max_height">35dp</dimen>
+    <dimen name="basic_button_txt_size">15sp</dimen>
+	
+    <!-- All activities text sizes -->
+    <dimen name="spinner_text_size">18dp</dimen>
+    <dimen name="ndef_frag_spinner_text_size">10dp</dimen>
+    <dimen name="ndef_frag_spinner_max_width">120dp</dimen>
+
+        <!-- Welcome activity main text view dimensions -->
+    <dimen name="wc_act_main_txt_top_margin">80dp</dimen>
+    <dimen name="wc_act_main_txt_1_top_margin">3dp</dimen>
+    <dimen name="wc_act_main_txt_height">100dp</dimen>	
+    <!-- Welcome activity main text view dimensions -->
+    <dimen name="wc_act_main_txt_size">20dp</dimen>
+
+	<!-- Tag info activity add text view dimension -->
+    <dimen name="ti_act_add_txt_header_size">12dp</dimen>
+    <dimen name="ti_act_add_txt_field_size">12dp</dimen>
+    <!-- Tag info activity ndef area & text view dimension -->
+    <dimen name="ti_act_ndef_content_txt_size">12dp</dimen>    
+    
+	<!-- Tag header dimensions -->
+    <dimen name="tag_header_model_txt_size">20dp</dimen>
+    <dimen name="tag_header_add_desc_txt_size">15dp</dimen>
+    <dimen name="tag_header_tag_type_txt_size">15dp</dimen>
+
+     <!-- Tag menu details dimensions -->
+    <!-- App header has specific margins, as global applications margin don't apply on this activity
+    -> App header left margin = activity_horizontal_margin + NFC_app_header_left_margin
+    -->
+    <dimen name="tmd_NFC_app_header_left_margin">90dp</dimen>
+    <dimen name="tmd_act_pager_top_margin">60dp</dimen>   
+ 
+    <!-- Menu CC File fragment dimensions -->
+    <dimen name="mcf_frag_field_left_margin">160dp</dimen>
+    <!-- Menu CC File fragment dimensions -->
+    <dimen name="mcf_frag_not_avail_txt_size">15dp</dimen>
+    <!-- All activities margins -->
+    <dimen name="all_act_tab_left_margin">20dp</dimen>
+    <dimen name="all_act_tab_top_margin">10dp</dimen>    
+    
+     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin_ploting">16dp</dimen>
+    <dimen name="activity_vertical_margin_ploting">16dp</dimen>
+    <dimen name="pie_segment_label_font_size">10dp</dimen>
+    <dimen name="title_font_size">13dp</dimen>
+    <dimen name="domain_label_font_size">13dp</dimen>
+    <dimen name="range_label_font_size">13dp</dimen>
+    <dimen name="range_tick_label_font_size">15dp</dimen>
+    <dimen name="domain_tick_label_font_size">15dp</dimen>
+    <dimen name="legend_text_font_size">20dp</dimen>
+
+	<!-- Tag menu activity main text view dimension -->
+	<dimen name="tm_act_main_txt_top_margin">40dp</dimen>
+    <dimen name="tm_act_main_txt_1_top_margin">10dp</dimen>
+    <dimen name="tm_act_main_txt_height">100dp</dimen>
+    
+    <!-- Tag menu activity Tap button view dimension -->
+    <dimen name="tm_act_tap_btn_left_margin">20dp</dimen>
+    <dimen name="tm_act_tap_btn_bottom_margin">20dp</dimen>
+    
+    <!-- Tag menu activity Basic buttons dimensions -->
+    <dimen name="tm_act_basic_btn_top_margin">20dp</dimen>
+    <dimen name="tm_act_inter_btn_top_margin">5dp</dimen>
+    
+    <!--  Tag menu M24LR/M24SR specific buttons dimensions -->
+    <dimen name="tm_act_specific_btn_top_margin">20dp</dimen>
+    <dimen name="tm_act_m24lr_pwd_btn_width">180dp</dimen>
+    <dimen name="tm_act_m24lr_lock_btn_width">180dp</dimen>
+    <dimen name="tm_act_m24lr_eh_btn_width">180dp</dimen>
+    <dimen name="tm_act_m24sr_pwd_btn_width">250dp</dimen>
+    <dimen name="tm_act_m24sr_it_btn_width">180dp</dimen>    
+
+    <!-- Menu NDEF File fragment dimensions -->
+    <dimen name="mnf_frag_NDEF_msg_header_field_size">12px</dimen> <!-- Strange that if "12dp" is used, text size is doubled in Java, whereas not in XML... -->
+    <dimen name="mnf_frag_NDEF_msg_nb_field_size">12px</dimen>
+    
+    <!-- Welcome activity WWW button dimensions -->
+	<dimen name="wc_act_www_btn_right_margin">5dp</dimen>
+	<dimen name="wc_act_www_btn_bottom_margin">30dp</dimen>
+    
+    
+</resources>

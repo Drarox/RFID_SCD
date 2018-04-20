@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.st.NFC.MenuTagInfoFragment" >
+    
+    <RelativeLayout
+        android:id="@+id/TiActTagHeaderFragmentId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true" />
+ 	
+	<RelativeLayout
+	    android:id="@+id/TiActAddTxtRelLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:layout_below="@+id/TiActTagHeaderFragmentId"
+	    android:layout_marginTop="@dimen/ti_act_add_txt_top_margin" >
+
+	    <TextView
+    	    android:id="@+id/TiActAddTxtManufacturerHeaderId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+        	android:typeface="serif"
+        	android:textStyle="bold"
+		    android:text="@string/ti_act_add_txt_manufacturer_header"
+    	    android:textSize="@dimen/ti_act_add_txt_header_size" />
+
+	    <TextView
+    	    android:id="@+id/TiActAddTxtManufacturerFieldId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignBottom="@+id/TiActAddTxtManufacturerHeaderId"
+		    android:layout_toRightOf="@+id/TiActAddTxtManufacturerHeaderId"
+		    android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin"
+        	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_add_txt_field_size" />
+
+	    <TextView
+        	android:id="@+id/TiActAddTxtUIDHeaderId"
+	        android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+	        android:typeface="serif"
+        	android:textStyle="bold"
+		    android:layout_below="@+id/TiActAddTxtManufacturerHeaderId"
+		    android:text="@string/ti_act_add_txt_uid_header"
+        	android:textSize="@dimen/ti_act_add_txt_header_size" />
+
+	    <TextView
+    	    android:id="@+id/TiActAddTxtUIDFieldId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignBottom="@+id/TiActAddTxtUIDHeaderId"
+		    android:layout_toRightOf="@+id/TiActAddTxtUIDHeaderId"
+		    android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin"
+        	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_add_txt_field_size" />
+	    
+	    <TextView
+        	android:id="@+id/TiActAddTxtDSFIDHeaderId"
+	        android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+	        android:typeface="serif"
+        	android:textStyle="bold"
+		    android:layout_below="@+id/TiActAddTxtUIDHeaderId"
+		    android:text="@string/ti_act_add_txt_dsfid_header"
+        	android:textSize="@dimen/ti_act_add_txt_header_size" />
+
+	    <TextView
+    	    android:id="@+id/TiActAddTxtDSFIDFieldId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignBottom="@+id/TiActAddTxtDSFIDHeaderId"
+		    android:layout_toRightOf="@+id/TiActAddTxtDSFIDHeaderId"
+		    android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin"
+        	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_add_txt_field_size" />
+	    
+	    <TextView
+        	android:id="@+id/TiActAddTxtAFIHeaderId"
+	        android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+	        android:typeface="serif"
+        	android:textStyle="bold"
+		    android:layout_below="@+id/TiActAddTxtDSFIDHeaderId"
+		    android:text="@string/ti_act_add_txt_afi_header"
+        	android:textSize="@dimen/ti_act_add_txt_header_size" />
+	
+	    <TextView
+    	    android:id="@+id/TiActAddTxtAFIFieldId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignBottom="@+id/TiActAddTxtAFIHeaderId"
+		    android:layout_toRightOf="@+id/TiActAddTxtAFIHeaderId"
+		    android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin"
+        	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_add_txt_field_size" />
+
+		<RelativeLayout
+		    android:id="@+id/TiActAddTxtMemoryAreaId"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	    	android:layout_alignParentLeft="true"
+			android:layout_below="@+id/TiActAddTxtAFIHeaderId" >
+
+		    <TextView
+	        	android:id="@+id/TiActAddTxtMemoryHeaderId"
+		        android:layout_width="wrap_content"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_alignParentTop="true"
+	        	android:layout_alignParentLeft="true"
+		        android:typeface="serif"
+	        	android:textStyle="bold"
+			    android:text="@string/ti_act_add_txt_memory_header"
+	        	android:textSize="@dimen/ti_act_add_txt_header_size" />
+	
+		    <TextView
+	    	    android:id="@+id/TiActAddTxtMemSizeId"
+	        	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    	    	android:layout_alignBottom="@+id/TiActAddTxtMemoryHeaderId"
+		    	android:layout_toRightOf="@+id/TiActAddTxtMemoryHeaderId"
+		       	android:typeface="serif"
+	    	    android:textSize="@dimen/ti_act_add_txt_field_size"
+				android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin" />
+		    	
+		    <TextView
+	    	    android:id="@+id/TiActAddTxtMemSizeSuffixId"
+	        	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    	    	android:layout_alignBottom="@+id/TiActAddTxtMemSizeId"
+		    	android:layout_toRightOf="@+id/TiActAddTxtMemSizeId"
+		       	android:typeface="serif"
+			    android:text="@string/ti_act_add_txt_memory_size_suffix"
+	    	    android:textSize="@dimen/ti_act_add_txt_field_size"
+				android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin" />
+	
+		    <TextView
+	    	    android:id="@+id/TiActAddTxtMemBlcksId"
+	        	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    	    	android:layout_alignLeft="@+id/TiActAddTxtMemSizeId"
+		    	android:layout_below="@+id/TiActAddTxtMemSizeId"
+		       	android:typeface="serif"
+	    	    android:textSize="@dimen/ti_act_add_txt_field_size" />
+		    	
+		    <TextView
+	    	    android:id="@+id/TiActAddTxtMemBlcksSuffixId"
+	        	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    	    	android:layout_alignBottom="@+id/TiActAddTxtMemBlcksId"
+		    	android:layout_toRightOf="@+id/TiActAddTxtMemBlcksId"
+		       	android:typeface="serif"
+			    android:text="@string/ti_act_add_txt_memory_blcks_suffix"
+	    	    android:textSize="@dimen/ti_act_add_txt_field_size"
+				android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin" />
+	
+		    <TextView
+	    	    android:id="@+id/TiActAddTxtMemBytesPerBlckId"
+	        	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    	    	android:layout_alignBottom="@+id/TiActAddTxtMemBlcksSuffixId"
+		    	android:layout_toRightOf="@+id/TiActAddTxtMemBlcksSuffixId"
+		       	android:typeface="serif"
+	    	    android:textSize="@dimen/ti_act_add_txt_field_size"
+				android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin" />
+		    	
+		    <TextView
+	    	    android:id="@+id/TiActAddTxtMemBytesPerBlckSuffixId"
+	        	android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    	    	android:layout_alignBottom="@+id/TiActAddTxtMemBytesPerBlckId"
+		    	android:layout_toRightOf="@+id/TiActAddTxtMemBytesPerBlckId"
+		       	android:typeface="serif"
+			    android:text="@string/ti_act_add_txt_memory_bytes_per_blck_suffix"
+	    	    android:textSize="@dimen/ti_act_add_txt_field_size"
+				android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin" />
+		    
+		</RelativeLayout>
+	    	    	    	    
+	    <TextView
+        	android:id="@+id/TiActAddTxtTechListHeaderId"
+	        android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+	        android:typeface="serif"
+        	android:textStyle="bold"
+		    android:layout_below="@+id/TiActAddTxtMemoryAreaId"
+		    android:text="@string/ti_act_add_txt_tech_list_header"
+        	android:textSize="@dimen/ti_act_add_txt_header_size" />
+	
+	    <TextView
+    	    android:id="@+id/TiActAddTxtTechListFieldId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignTop="@+id/TiActAddTxtTechListHeaderId"
+		    android:layout_toRightOf="@+id/TiActAddTxtTechListHeaderId"
+		    android:layout_marginLeft="@dimen/ti_act_add_txt_field_left_margin"
+		    android:scrollHorizontally="false"
+        	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_add_txt_field_size" />
+	    
+	</RelativeLayout>
+
+	<RelativeLayout
+	    android:id="@+id/TiActNdefAreaId"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_below="@+id/TiActAddTxtRelLayout"
+        android:layout_alignParentLeft="true"
+		android:layout_marginTop="@dimen/ti_act_ndef_area_top_margin"
+		android:layout_marginBottom="@dimen/ti_act_ndef_area_bottom_margin" >
+
+	    <TextView
+    	    android:id="@+id/TiActNdefContentId"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+    	    android:layout_alignParentTop="true"
+    	    android:layout_alignParentLeft="true"
+	       	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_ndef_content_txt_size" />
+ 	    <!--
+	    <include layout="@layout/view_exp_list_ndef_msg" />
+   		-->
+	    	
+	</RelativeLayout>
+
+</RelativeLayout>

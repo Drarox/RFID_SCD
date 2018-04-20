@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/STToastId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_40_translucent" >
+    
+	<ImageView
+	    android:id="@+id/STToastImgId"
+	    android:contentDescription="@string/st_toast_img_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:alpha="1"
+        android:maxWidth="@dimen/st_toast_img_max_width"
+        android:maxHeight="@dimen/st_toast_img_max_height" />
+
+    <TextView
+        android:id="@+id/STToastTxtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/STToastImgId"
+        android:layout_marginLeft="@dimen/st_toast_txt_left_margin"
+        android:layout_centerVertical="true"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textSize="@dimen/st_toast_txt_size" />
+
+</RelativeLayout>

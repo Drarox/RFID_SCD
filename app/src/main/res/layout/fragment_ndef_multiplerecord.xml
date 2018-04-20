@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NDEFMultiRecordsFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlMultiRcdsId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/NDEFSimpleTextFragmentMultipleRecordViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cfe7f5"
+            android:gravity="top"
+            android:imeOptions="actionDone"
+            android:text="MULTIPLE RECORD DETECTED"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/NDEFSimpleTextFragmentMultipleRecordViewId"
+            android:layout_marginTop="@dimen/all_act_tab_top_margin"
+            android:layout_centerVertical="true">
+
+            <ScrollView
+                android:id="@+id/rllistndefRcdsmsg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginBottom="@dimen/ti_act_add_txt_top_margin" >
+            <ListView
+                android:id="@+id/listviewrecords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

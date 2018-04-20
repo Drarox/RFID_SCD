@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RFID SCD</string>
+    <string name="app_version_prefix">version</string>
+    <string name="app_version">2.1.3</string>
+    <!-- Application version text view dimensions -->
+    <dimen name="version_txt_size">10dp</dimen>
+    <dimen name="version_space_size">4dp</dimen>  
+
+    <string name="about_text">\
+			Discover the NFC world ...
+			This Application is provided as an example without any support.....
+			The application helps you to start your own using this as a starting point .... 
+	</string>	
+    
+    
+</resources>

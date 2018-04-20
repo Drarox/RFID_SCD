@@ -1,0 +1,267 @@
+<resources>
+
+    <string name="about_title">MMY Demo Appli ....</string>
+    <string name="ccfile_text">CC file information</string>
+    <string name="sysfile_text">Sys file information</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="Fragment1">This is Fragment 1</string>
+    <string name="Fragment2">This is Fragment 2</string>
+    <string name="Fragment3">This is Fragment 3</string>
+
+    <string name="main_title">NFC discovery purpose</string>
+
+    <string name="tagRead_label">ST25 Tag Read</string>
+    <string name="tagWrite_label">ST25 Tag Write</string>
+    <string name="about_label">About</string>
+    <string name="demo_label">Demo</string>
+
+    <string name="st_toast_img_descr">ST logo</string>
+    <string name="st_toast_txt_suffix">tag detected</string>
+    <string name="st_web">www.st.com</string>
+
+    <!-- Tag Info activity strings -->
+    <string name="ti_act_add_txt_manufacturer_header">Manufacturer:</string>
+    <string name="ti_act_add_txt_uid_header">UID:</string>
+    <string name="ti_act_add_txt_dsfid_header">DSFID:</string>
+    <string name="ti_act_add_txt_afi_header">AFI:</string>
+    <string name="ti_act_add_txt_memory_header">Memory size:</string>
+    <string name="ti_act_add_txt_memory_size_suffix">bytes</string>
+    <string name="ti_act_add_txt_memory_size_unknown">Unknown size</string>
+    <string name="ti_act_add_txt_memory_size_unknown_suffix"></string>
+    <string name="ti_act_add_txt_memory_blcks_suffix">blocks /</string>
+    <string name="ti_act_add_txt_memory_blcks_unknown">Unknown blocks number</string>
+    <string name="ti_act_add_txt_memory_blcks_unknown_suffix">/</string>
+    <string name="ti_act_add_txt_memory_bytes_per_blck_suffix">bytes per block</string>
+    <string name="ti_act_add_txt_memory_bytes_per_blck_unknown">Unknown block size</string>
+    <string name="ti_act_add_txt_memory_bytes_per_blck_unknown_suffix"></string>
+    <string name="ti_act_add_txt_tech_list_header">Tech list:</string>
+    <string name="ti_act_ndef_content_no_ndef">No NDEF data</string>
+    <string name="ti_act_new_tag_toast">New tag detected, UI updated</string>
+    <string name="ti_act_same_tag_toast">Same tag detected, no UI update</string>
+
+
+    <!-- Menu Tools File fragment strings -->
+    <string name="mt_frag_energy__harvesting__conf_txt">     ENERGY HARVESTING CONFIGURATION </string>
+    <string name="mt_frag_energy__harvesting__enable_txt">     ENERGY HARVESTING ENABLE CONTROL </string>
+
+    <!-- Common strings -->
+    <string name="all_act_CCLEN_header_txt">CCLEN (CC File length):</string>
+    <string name="all_act_SYSLEN_header_txt">System File length:</string>
+    <string name="all_act_map_ver_header_txt">Mapping Version:</string>
+    <string name="all_act_MLe_header_txt">MLe (Max R-APDU bytes):</string>
+    <string name="all_act_MLc_header_txt">MLc (Max C-APDU bytes):</string>
+    <string name="all_act_T_header_txt">T (type):</string>
+    <string name="all_act_L_header_txt">L (length):</string>
+    <string name="all_act_EFID_header_txt">EF ID:</string>
+    <string name="all_act_NDEFID_header_txt">NDEF ID:</string>
+    <string name="all_act_NDEF_File_lgth_header_txt">NDEF File length (bytes):</string>
+    <string name="all_act_read_acc_header_txt">Read access rights:</string>
+    <string name="all_act_write_acc_header_txt">Write access rights:</string>
+    <string name="all_act_NDEF_File_Ctrl_TLV_txt">NDEF File Control TLV</string>
+    <string name="all_act_proprietary_File_Ctrl_TLV_txt">Proprietary File Control TLV</string>
+    <string name="all_act_enabled">enabled</string>
+    <string name="all_act_disabled">disabled</string>
+    <string name="all_act_present">present</string>
+    <string name="all_act_absent">not present</string>
+    <string name="all_act_protected">protected</string>
+    <string name="all_act_not_protected">not protected</string>
+    <string name="all_act_active">active</string>
+    <string name="all_act_not_active">not active</string>
+    <string name="all_act_on">on</string>
+    <string name="all_act_off">off</string>
+    <string name="all_act_low">low</string>
+    <string name="all_act_high">high</string>
+    <string name="all_act_warning">Warning</string>
+    <string name="all_act_Mgic_header_txt">Magic Num :</string>
+    <string name="all_act_mem_size_header_txt">Memory size :</string>
+    <string name="all_act_ra_header_txt">Read  access :</string>
+    <string name="all_act_wa_header_txt">Write access :</string>
+
+    <!--  String Def - NDEF WRITE LIST -->
+
+    <string name="actionLabelText">TEXT</string>
+    <string name="actiondetailtext">Create a NDEF Text Message</string>
+    <string name="actionLabelURI">URI</string>
+    <string name="actiondetailURI">Create a NDEF URI message</string>
+    <string name="actionLabelContact">Contact</string>
+    <string name="actiondetailContact">Create a NDEF Vcard message</string>
+    <string name="actionLabelm24srDiscoCtrl">M24SR (*)</string>
+    <string name="actiondetailm24srDiscoCtrl">Create NDEF external Type Message</string>
+    <string name="actionLabelwifi">Wifi</string>
+    <string name="actiondetailwifi">Create Wifi Handover Message</string>
+    <string name="actionLabelbt">BlueTooth</string>
+    <string name="actiondetailbt">Create BlueTooth Handover Message</string>
+    <string name="actiondetailbtle">Create BlueTooth LE Message</string>
+    <string name="actionLabelsms">Sms</string>
+    <string name="actiondetailsms">Create SMS Message</string>
+    <string name="actionLabelmail">E-mail</string>
+    <string name="actiondetailmail">Create E-mail Message</string>
+    <string name="actionLabelaar">AAR</string>
+    <string name="actiondetailaar">Create Android app Launcher Message</string>
+
+
+    <!--  Fragment Edit Text -->
+
+    <string name="EditTextLabel">Enter Your Message</string>
+
+    <!-- Tag header strings -->
+    <string name="tag_header_default_model_txt">No tag</string>
+    <string name="tag_header_default_add_desc_txt"></string>
+    <string name="tag_header_default_tag_type_txt"></string>
+    <string name="tag_header_tail_txt">______________________________</string>
+
+    <string name="mnw_header_txt">NDEF write menu</string>
+
+    <string name="getapp">Select Installed App</string>
+    <string name="AAR">AAR  : </string>
+
+    <!-- Common dialogs -->
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_overwrite">Overwrite</string>
+    <string name="button_replace">Replace</string>
+    <string name="button_refresh">Refresh</string>
+
+    <!-- Password dialogs -->
+    <string name="pw_button_ok">Set</string>
+    <string name="pw_button_cancel">Cancel</string>
+    <string name="pw_title">Password</string>
+    <string name="pw_rotection_title">Memory Protection pwd</string>
+    <string name="pw_writemsg">Enter short key [2-32] Hex Chars\nto generate the 128-bit write password</string>
+    <string name="pw_readmsg">Enter short key [2-32] Hex Chars\nto generate the 128-bit read password</string>
+    <string name="pw_rightmsg">Enter short key [2-32] Hex Chars\nto generate the 128-bit write password</string>
+    <string name="pw_writemsg64">Enter short key [2-16] Hex Chars\nto generate the 64-bit write password</string>
+    <string name="pw_readmsg64">Enter short key [2-16] Hex Chars\nto generate the 64-bit read password</string>
+    <string name="pw_rightmsg64">Enter short key [2-16] Hex Chars\nto generate the 64-bit write password</string>
+
+    <!-- NDEF messages -->
+    <string name="ndef_simple_msg_write_ok">Write successful !</string>
+    <string name="ndef_simple_msg_write_ongoing">Write ongoing&#8230;</string>
+    <string name="ndef_simple_msg_write_locked">Need to unlock area before writting in&#8230;</string>
+    <string name="ndef_simple_msg_write_wrong_pwd">Wrong password, unlock tag before writting in&#8230;</string>
+    <string name="ndef_simple_msg_write_err_tag_lost">Tag is out of range</string>
+
+    <string name="ndef_simple_msg_write_err_io">IO error</string>
+    <string name="ndef_simple_msg_write_err_bad_msg">Message not well formatted</string>
+    <string name="ndef_simple_msg_write_err_ro_tag">Read-only tag</string>
+    <string name="ndef_simple_msg_write_err_not_supported">Write not possible on this tag</string>
+    <string name="ndef_simple_msg_write_no_fragment">No NDEF message to write</string>
+    <string name="ndef_simple_msg_write_cancel">NDEF write cancelled</string>
+    <string name="err_tag_not_unlocked"> Wrong Key !</string>
+    <string name="ndef_write_success">Write tag</string>
+    <string name="ndef_write_LockReq">Need write password</string>
+    <string name="ndef_write_error">Write tag ERROR</string>
+    <string name="ndef_write_new_tag">New tag detected since last display.\nOverwrite new tag ?\nRefresh info with new tag ?\nor Cancel</string>
+
+    <string name="ndef_write_use_case_not_hamdled">Need write use case not supported</string>
+    <string name="nfc_app_header_str">ST NFC application</string>
+    <string name="nfc_app_header_img_descr">NFC app header image</string>
+
+
+    <!-- Tag Menu activity strings -->
+    <string name="tm_act_Tag_Info_btn_txt">Tag Info</string>
+    <string name="tm_act_SMARTNDEF_btn_txt">NDEF</string>
+    <string name="tm_act_NDEF_btn_txt">NDEF detail</string>
+    <string name="tm_act_CC_btn_txt">CC file</string>
+    <string name="tm_act_system_btn_txt">SYSTEM file *</string>
+    <string name="tm_act_tools_btn_txt">Tools</string>
+    <string name="tm_act_bin_btn_txt">BIN content</string>
+    <string name="tm_act_m24lr_pwd_btn_txt">Password *</string>
+    <string name="tm_act_m24lr_lock_btn_txt">Lock sector *</string>
+    <string name="tm_act_m24lr_eh_btn_txt">Energy Harvesting *</string>
+    <string name="tm_act_m24sr_pwd_btn_txt">Manage pwd \u0026 access rights *</string>
+    <string name="tm_act_m24sr_it_btn_txt">Manage interrupts *</string>
+    <string name="tm_act_m24sr_demo_btn_txt">M24SRDemo *</string>
+    <string name="tm_act_toolslr_btn_txt">Tools *</string>
+    <string name="tm_act_m24lr_demo_btn_txt">Extra *</string>
+    <string name="tm_act_st25dv_demo_btn_txt">Extra *</string>
+
+
+    <!-- Tag Menu details activity strings -->
+    <string name="tmd_act_default_menu_title">Dummy menu</string>
+    <string name="tmd_act_default_menu_txt">Functionality not implemented for the moment</string>
+    <string name="tmd_act_navigation_helper_right">Right Navigation Helper container</string>
+    <string name="tmd_act_navigation_helper_left">Left Navigation Helper container</string>
+
+    <!-- Menu NDEF File fragment strings -->
+
+    <!-- Menu CC File fragment strings -->
+    <string name="mcf_frag_not_avail_txt">CC File not available for this tag</string>
+    <string name="mcf_frag_lock_state_read_txt">[R lock state] </string>
+    <string name="mcf_frag_lock_state_write_txt">[W lock state] </string>
+
+    <!-- Menu System File fragment strings -->
+    <string name="msf_frag_not_avail_txt">SYSTEM File not available for this tag</string>
+    <string name="msf_frag_i2c_protect_header_txt">I2C protect:</string>
+    <string name="sys_file_i2c_protect_by_pwd">protected by I2C pwd</string>
+    <string name="sys_file_super_user_rights">super User rights</string>
+    <string name="msf_frag_i2c_watchdog_header_txt">I2C watchdog:</string>
+    <string name="msf_frag_gpo_header_txt">GPO status:</string>
+    <string name="msf_frag_counter_header_txt">Counter status:</string>
+    <string name="msf_frag_counter_value_context_txt">Access Counter:</string>
+    <string name="msf_frag_gpo_rf_header_txt">RF session:</string>
+    <string name="msf_frag_gpo_i2c_header_txt">I2C session:</string>
+    <string name="msf_frag_wire_pwr_mng_header_txt">Wire Power Management</string>
+    <string name="msf_frag_tag_rf_powered_txt">Tag powered by RF field</string>
+    <string name="msf_frag_tag_vcc_powered_txt">Tag powered by Vcc</string>
+    <string name="msf_frag_rf_enable_header_txt">RF enable field:</string>
+    <string name="msf_frag_rf_enable_field_on_header_txt">Field status:</string>
+    <string name="msf_frag_rf_enable_dis_pad_state_header_txt">RF disable pad state:</string>
+    <string name="msf_frag_rf_enable_cmd_dec_header_txt">RF commands decoding:</string>
+    <string name="msf_frag_ndef_files_nb_header_txt">NDEF files number:</string>
+    <string name="msf_frag_product_version_header_txt">Product version:</string>
+    <string name="msf_frag_uid_header_txt">UID:</string>
+    <string name="msf_frag_mem_size_header_txt">Memory Size:</string>
+    <string name="msf_frag_prod_code_header_txt">Product Code:</string>
+    <string name="msf_frag_dsfid_protect_header_txt">Data Storage Format ID:</string>
+    <string name="msf_frag_afi_protect_header_txt">App Family Id (AFI):</string>
+    <string name="msf_frag_memorymap_protect_header_txt"> Memory :</string>
+    <string name="msf_frag_memorymapblock_protect_header_txt"> blocks:</string>
+    <string name="msf_frag_memorymapblocksize_protect_header_txt"> bytes per block:</string>
+
+    <!-- Wait For TAP  activity strings -->
+    <string name="Wait_For_Tap_Feature_not_available">Functionnality not available for this product</string>
+
+    <!-- Welcome activity strings -->
+    <string name="wc_act_default_main_txt_1"></string>
+    <string name="wc_act_default_main_txt_2"></string>
+    <string name="wc_act_tag_wait_str_1">Place your phone</string>
+    <string name="wc_act_tag_wait_str_2">close to a tag</string>
+    <string name="wc_act_nfc_not_avail_str_1"></string>
+    <string name="wc_act_nfc_not_avail_str_2">NFC not available on this device. This application cannot be used</string>
+    <string name="wc_act_nfc_not_enabled_str_1"></string>
+    <string name="wc_act_nfc_not_enabled_str_2">NFC not activated, please check it!</string>
+    <string name="wc_act_nfc_waves_anim_descr">NFC waves animation container</string>
+
+    <!-- Common buttons strings -->
+    <string name="all_act_tap_btn_txt">Tap another tag</string>
+
+    <string name="mnr_header_txt">NDEF details menu</string>
+
+    <!-- Tags specific strings -->
+    <string name="st_tags_add_description">Dynamic NFC/RFID tags</string>
+    <string name="m24lr_tags_footnote">* M24LRxx products only</string>
+    <string name="st25dv_tags_footnote">* ST25DVxx products only</string>
+    <string name="st25tv_tags_footnote">* ST25TVxx products only</string>
+    <string name="m24sr_tags_footnote">* M24SRxx products only</string>
+    <string name="ST25TA_tags_footnote">* ST25TAxx products only</string>
+    <string name="rx95hf_tags_footnote">* RX95HF products only</string>
+    <string name="toolExtendedReadBinaryTitle">Extended read Binary</string>
+
+    <string name="mb_cmd_prompt">Choose an action</string>
+
+    <string-array name="mb_cmd_prompt_arrays">
+        <!--<item>R/H - Simple Transfer </item>-->
+        <!--<item>R/H - Chained Transfer </item>-->
+        <!--<item>H/R - Simple Transfer </item>-->
+        <!--<item>H/R - Chained Transfer </item>-->
+        <item>R/H - Data Transfer</item>
+        <item>H/R - Data Transfer</item>
+    </string-array>
+    <string name="tstate_filenotfound">File not found in SD FW folder</string>
+
+    <!-- ST25TV strings -->
+    <string name="current_mem_conf_txt">Current memory configuration:</string>
+
+</resources>

@@ -1,0 +1,531 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NDEFRTDExtDiscoveryKitCtrlFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NDEFDiscoveryKitCtrlFragment" >
+    
+    <!-- Layout to manage Led -->
+    <RelativeLayout
+       	android:id="@+id/lledmanagement"
+       	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+        
+    	<!-- Layout to manage Led Status -->
+	   <RelativeLayout
+	        android:id="@+id/lledstatus"
+        	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal">
+	       <!-- Layout to manage Labels -->
+
+	       <RelativeLayout
+	           android:id="@+id/lledlabelstatus"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_marginRight="5dp"
+	           android:orientation="vertical" >
+
+		    	<TextView
+		    	    android:id="@+id/ledIDlabel"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="@string/ledid"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		    	<TextView
+		    	    android:id="@+id/ledinitialstatusLabel"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/ledIDlabel"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="@string/ledstatus"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		    	<TextView
+		        android:id="@+id/ledblinkspeedLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/black"
+		        android:textStyle="normal"
+		        android:text="@string/blinkspeed"
+		        android:typeface="serif"
+		        android:layout_below="@id/ledinitialstatusLabel"/>
+		    			   			    	
+	       </RelativeLayout>
+	       
+	       <!-- Layout to manage Led 1 -->
+
+	       <RelativeLayout
+	           android:id="@+id/lledstatus1"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_toRightOf="@id/lledlabelstatus"
+	           android:orientation="vertical" >
+
+	           <TextView
+	               android:id="@+id/ledStatusledid1"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:layout_centerHorizontal="true"
+	               android:layout_centerVertical="false"
+	               android:layout_marginBottom="10dp"
+	               android:gravity="center"
+	               android:text="@string/ledid1"
+	               android:textColor="@color/black"
+	               android:textStyle="normal"
+	               android:typeface="serif" />
+
+	           <CheckBox
+	               android:id="@+id/radio_led1"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:layout_below="@id/ledStatusledid1"
+	               android:layout_centerHorizontal="true"
+	               android:layout_marginBottom="10dp"
+	               android:gravity="center" />
+
+		    	<ToggleButton
+		    	    android:id="@+id/togglebuttonled1"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/radio_led1"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:textOff="Off"
+		    	    android:textOn="On" />
+
+	       </RelativeLayout>
+	       
+	       <!-- Layout to manage Led 2 -->
+	       <RelativeLayout	            
+	            android:id="@+id/lledstatus2"
+		       	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+		    	android:layout_toRightOf="@id/lledstatus1">
+
+		    	<TextView
+		    	    android:id="@+id/ledStatusledid2"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="@string/ledid2"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		    	<CheckBox
+		    	    android:id="@+id/radio_led2"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/ledStatusledid2"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="" />
+
+		    	<ToggleButton
+		    	    android:id="@+id/togglebuttonled2"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/radio_led2"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:textOff="Off"
+		    	    android:textOn="On" />
+
+	       </RelativeLayout>
+	       
+	       <!-- Layout to manage Led 3 -->
+	       <RelativeLayout
+	           	android:id="@+id/lledstatus3"
+		       	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+		    	android:layout_toRightOf="@id/lledstatus2">
+
+		    	<TextView
+		    	    android:id="@+id/ledStatusledid3"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="@string/ledid3"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		    	<CheckBox
+		    	    android:id="@+id/radio_led3"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/ledStatusledid3"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="" />
+
+		    	<ToggleButton
+		    	    android:id="@+id/togglebuttonled3"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/radio_led3"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:textOff="Off"
+		    	    android:textOn="On" />
+
+           </RelativeLayout>		    	
+
+	       <!-- Layout to manage Led 4 -->
+	       <RelativeLayout
+	            android:id="@+id/lledstatus4"
+		       	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+		    	android:layout_toRightOf="@id/lledstatus3">
+
+		    	<TextView
+		    	    android:id="@+id/ledStatusledid4"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="@string/ledid4"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		    	<CheckBox
+		    	    android:id="@+id/radio_led4"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/ledStatusledid4"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:text="" />
+
+		    	<ToggleButton
+		    	    android:id="@+id/togglebuttonled4"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_below="@id/radio_led4"
+		    	    android:layout_centerHorizontal="true"
+		    	    android:layout_marginBottom="10dp"
+		    	    android:textOff="Off"
+		    	    android:textOn="On" />
+
+	       </RelativeLayout>
+	    </RelativeLayout>
+	    
+	     <!-- Layout to manage Led Blinking speed -->
+
+	    <RelativeLayout
+	        android:id="@+id/lledBlinking"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/lledstatus"
+	        android:layout_marginBottom="10dp"
+	        android:layout_marginTop="10dp"
+	        android:orientation="horizontal" >
+
+	        	<TextView
+	        	    android:id="@+id/SeekBarLabel"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentLeft="true"
+	        	    android:layout_centerHorizontal="true"
+	        	    android:layout_centerVertical="true"
+	        	    android:layout_marginBottom="10dp"
+	        	    android:layout_marginRight="20dp"
+	        	    android:text="Speed"
+	        	    android:textColor="@color/black"
+	        	    android:textStyle="normal"
+	        	    android:typeface="serif" />
+	        	
+	        	<RelativeLayout	           	
+	            android:id="@+id/lledBlinking1"
+		       	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+		    	android:layout_toRightOf="@id/SeekBarLabel">
+		    	
+		    	<RelativeLayout	           	
+	            android:id="@+id/rlspeedLabel"
+		       	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical">
+		    	
+		    	   <TextView
+		    	       android:id="@+id/SeekBarLabelStop"
+		    	       android:layout_width="wrap_content"
+		    	       android:layout_height="wrap_content"
+		    	       android:layout_alignParentLeft="true"
+		    	       android:layout_alignParentRight="false"
+		    	       android:layout_centerHorizontal="true"
+		    	       android:layout_marginBottom="10dp"
+		    	       android:text="STOP"
+		    	       android:textColor="@color/black"
+		    	       android:textStyle="normal"
+		    	       android:typeface="serif" />
+		    	    	        	
+		    	    <TextView
+		    	        android:id="@+id/SeekBarLabelFull"
+		    	        android:layout_width="wrap_content"
+		    	        android:layout_height="wrap_content"
+		    	        android:layout_alignParentRight="true"
+		    	        android:layout_centerHorizontal="true"
+		    	        android:layout_marginBottom="10dp"
+		    	        android:text="FULL"
+		    	        android:textColor="@color/black"
+		    	        android:textStyle="normal"
+		    	        android:typeface="serif" />
+		    	
+	        	</RelativeLayout>
+	        	    	    	
+	       		<SeekBar
+	       		    android:id="@+id/blinkseekbar1"
+	       		    android:layout_width="match_parent"
+	       		    android:layout_height="wrap_content"
+	       		    android:layout_marginTop="26dp"
+	       		    android:max="3" >
+	       		</SeekBar>
+	       		
+	       </RelativeLayout>
+	    </RelativeLayout>
+	    
+
+    <!-- Layout to manage Line display -->
+	
+	<ScrollView
+    android:id="@+id/rllistndefmsg"
+    android:layout_width="wrap_content" 
+    android:layout_height="match_parent"
+    android:layout_marginBottom="80dp"
+    android:layout_below="@id/lledBlinking">
+	        	
+    <RelativeLayout
+        android:id="@+id/llineDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         >
+
+		<!-- Layout to manage Line 1 -->
+        <RelativeLayout
+            	android:id="@+id/lline1"
+		       	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal">
+
+		    	<TextView
+		    	    android:id="@+id/tvline1"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentBottom="true"
+		    	    android:text="@string/labelline1"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		        <EditText
+		            android:id="@+id/edit_line1"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@id/tvline1"
+		            android:hint="@string/edit_line1"
+		            android:maxLength="20" />
+
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 2 -->
+
+        <RelativeLayout
+            android:id="@+id/lline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline1"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		    	    android:id="@+id/tvline2"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentBottom="true"
+		    	    android:text="@string/labelline2"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		        <EditText android:id="@+id/edit_line2"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/edit_line2" 
+			        android:maxLength="20"
+			        android:layout_toRightOf="@id/tvline2"/>
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 3 -->
+
+        <RelativeLayout
+            android:id="@+id/lline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline2"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		    	    android:id="@+id/tvline3"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentBottom="true"
+		    	    android:text="@string/labelline3"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		        <EditText android:id="@+id/edit_line3"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/edit_line3" 
+			        android:maxLength="20"
+			        android:layout_toRightOf="@id/tvline3"/>
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 4 -->
+
+        <RelativeLayout
+            android:id="@+id/lline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline3"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		        android:id="@+id/tvline4"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/black"
+		        android:textStyle="normal"
+		        android:text="@string/labelline4"
+		        android:typeface="serif" />
+
+		        <EditText
+		            android:id="@+id/edit_line4"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@id/tvline4"
+		            android:hint="@string/edit_line4"
+		            android:maxLength="20"
+		            android:visibility="gone" />
+
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 5 -->
+
+        <RelativeLayout
+            android:id="@+id/lline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline4"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		    	    android:id="@+id/tvline5"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentBottom="true"
+		    	    android:text="@string/labelline5"
+		    	    android:textColor="@color/black"
+		    	    android:textStyle="normal"
+		    	    android:typeface="serif" />
+
+		        <EditText android:id="@+id/edit_line5"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/edit_line5" 
+			        android:maxLength="20"
+			        android:layout_toRightOf="@id/tvline5"/>
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 6 -->
+
+        <RelativeLayout
+            android:id="@+id/lline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline5"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		        android:id="@+id/tvline6"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/black"
+		        android:layout_alignParentBottom="true"
+		        android:textStyle="normal"
+		        android:text="@string/labelline6"
+		        android:typeface="serif" />
+		        <EditText android:id="@+id/edit_line6"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/edit_line6" 
+			        android:maxLength="20"
+			        android:layout_toRightOf="@id/tvline6"/>
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 7 -->
+
+        <RelativeLayout
+            android:id="@+id/lline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline6"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		        android:id="@+id/tvline7"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/black"
+		        android:layout_alignParentBottom="true"
+		        android:textStyle="normal"
+		        android:text="@string/labelline7"
+		        android:typeface="serif" />
+		        <EditText android:id="@+id/edit_line7"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/edit_line7" 
+			        android:maxLength="20"
+			        android:layout_toRightOf="@id/tvline7"/>
+   		</RelativeLayout>
+   		<!-- Layout to manage Line 8 -->
+
+        <RelativeLayout
+            android:id="@+id/lline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lline7"
+            android:orientation="horizontal" >
+
+		    	<TextView
+		        android:id="@+id/tvline8"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/black"
+		        android:layout_alignParentBottom="true"
+		        android:textStyle="normal"
+		        android:text="@string/labelline8"
+		        android:typeface="serif" />
+		        <EditText android:id="@+id/edit_line8"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:hint="@string/edit_line8" 
+			        android:maxLength="20"
+			        android:layout_toRightOf="@id/tvline8"/>
+   		</RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+	</RelativeLayout> <!-- End Layout led management Led -->
+
+</FrameLayout>

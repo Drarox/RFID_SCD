@@ -1,0 +1,347 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NDEFRTDVCardFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NDEFVCardFragment" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="getContact"
+        android:text="@string/button_text" />
+
+    <ScrollView
+        android:id="@+id/overallVcardscrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutVcardscrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/LayouttextField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button1"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/LayoutNameField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/Contact_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="@string/name_hint" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/LayoutnameView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Contact_Name"
+                        android:layout_alignBottom="@+id/Contact_Name"
+                        android:layout_alignParentLeft="true"
+                        android:text="Name" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/LayoutNumberField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/LayoutNameField"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/Contact_Number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="@string/number_hint" />
+
+                    <TextView
+                        android:id="@+id/LayoutNumberView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Contact_Number"
+                        android:layout_alignBottom="@+id/Contact_Number"
+                        android:layout_alignParentLeft="true"
+                        android:text="Number" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/LayoutEmailField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/LayoutNumberField"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/Contact_Email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="@string/email_hint" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Contact_Email"
+                        android:layout_alignBottom="@+id/Contact_Email"
+                        android:layout_alignParentLeft="true"
+                        android:text="Email" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/LayoutaddrField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/LayoutEmailField"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/Contact_SPAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="@string/SPAddr_hint" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Contact_SPAddr"
+                        android:layout_alignBottom="@+id/Contact_SPAddr"
+                        android:layout_alignParentLeft="true"
+                        android:text="Address" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/LayoutWebsiteField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/LayoutaddrField"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/Contact_WebSiteAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/Contact_WebSiteAddr"
+                        android:layout_alignBottom="@id/Contact_WebSiteAddr"
+                        android:layout_alignParentLeft="true"
+                        android:text="WebSite" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LayoutPhotoField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LayouttextField"
+                android:orientation="horizontal" >
+
+                <ScrollView
+                    android:id="@+id/ScrollView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/LayoutScrollViewPhoto"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/photoView"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/vcardpicture" />
+
+                        <Button
+                            android:id="@+id/capture_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/photoView"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/relative_selector"
+                            android:onClick="captureFrame"
+                            android:text="   Capture [*]   " >
+                        </Button>
+
+                        <RelativeLayout
+                            android:id="@+id/LayoutPhotoFieldCrops"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/capture_btn_Checkbox"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Export Photo: " />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/photoVCardlayoutQASeek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/photoView"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/SeekBarLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Photo Quality"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"
+                                android:typeface="serif" />
+
+                            <RelativeLayout
+                                android:id="@+id/photoVCardlayoutinfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/SeekBarLabel"
+                                android:orientation="vertical" >
+
+                                <RelativeLayout
+                                    android:id="@+id/rlphotoLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:id="@+id/SeekBarLabelStop"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentRight="false"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Low QA[0]"
+                                        android:textColor="@color/black"
+                                        android:textStyle="normal"
+                                        android:typeface="serif" />
+
+                                    <TextView
+                                        android:id="@+id/SeekBarLabelFull"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:text="High QA[100]"
+                                        android:textColor="@color/black"
+                                        android:textStyle="normal"
+                                        android:typeface="serif" />
+                                </RelativeLayout>
+
+                                <SeekBar
+                                    android:id="@+id/photoSizeSlider"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="26dp"
+                                    android:max="100"
+                                    android:progress="50" >
+                                </SeekBar>
+                            </RelativeLayout>
+                            <!-- Cosmetic and usage -->
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutinfoView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/photoVCardlayoutQASeek"
+                            android:divider="?android:dividerHorizontal"
+                            android:orientation="vertical"
+                            android:showDividers="middle" >
+
+                            <TextView
+                                android:id="@+id/cosmetictext1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/linearLayoutinfoView"
+                                android:text="* : Capture feature depends on phone capabilities" />
+
+                            <TextView
+                                android:id="@+id/cosmetictext2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/cosmetictext1"
+                                android:text="Photo weight processing is by default set to 80 " />
+
+                            <TextView
+                                android:id="@+id/cosmetictext3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/cosmetictext2"
+                                android:text="Adjust the photo weight for VCard writing feature with the slider according to the available tag size if necessary ..." />
+
+                            <TextView
+                                android:id="@+id/cosmetictext4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/cosmetictext3"
+                                android:text="" />
+                            <TextView
+                                android:id="@+id/cosmetictext5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/cosmetictext4"
+                                android:text="" />                            
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

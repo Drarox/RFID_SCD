@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <TableRow
+                android:id="@+id/REGtableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+                <TextView
+                    android:id="@+id/TextViewEH"
+                    android:gravity="center"
+                    android:text="EH"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/TextViewEHValue"
+                    android:gravity="center"
+                    android:text="xx"
+                    android:textSize="@dimen/ti_act_add_txt_header_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/EditViewEHValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:maxLength="2"
+                    android:hint="00"
+                    android:singleLine="true" 
+                    android:digits="0123456789ABCDEF"
+					android:inputType="textCapCharacters"/>
+
+                <Button
+                    android:id="@+id/BTextViewEHValue"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:background="@drawable/relative_selector"
+                    android:text=" Write "
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/black"
+                    android:layout_height="@dimen/basic_button_max_height"
+                    android:textSize="@dimen/basic_button_txt_size"
+                    android:textStyle="bold"
+                    android:typeface="serif" >
+                </Button>
+</TableRow>   
+
+</merge>

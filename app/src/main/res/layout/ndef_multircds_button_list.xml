@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/icMREdit"
+        android:layout_width="48dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="6dip"
+        android:contentDescription="Text Edit Icon"
+        android:src="@drawable/logo_st25" />
+
+    <TextView
+        android:id="@+id/secondLine"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/icMREdit"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Multi records selected in following list" />
+
+    <TextView
+        style="@style/CodeFont.Big"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/secondLine"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toRightOf="@id/icMREdit"
+        android:gravity="center_vertical"
+        android:text="Write NDEF Multi Rcds" />
+    
+
+</merge>

@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MenuNDEFFilesFragment" >
+
+    <RelativeLayout
+        android:id="@+id/MnfTagHeaderFragmentId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true" />
+ 	
+
+    <TextView
+        android:id="@+id/MnfNoNDEFDataId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/MnfTagHeaderFragmentId"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/ti_act_add_txt_top_margin"
+        android:typeface="serif"
+        android:text="@string/mnf_no_ndef_data_txt"
+        android:textSize="@dimen/mcf_frag_not_avail_txt_size"/>
+    
+    <Button
+	    android:id="@+id/unlockReadBtnId"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/MnfNoNDEFDataId"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerInParent="true"
+	    android:layout_centerVertical="true"
+	    android:background="@drawable/relative_selector"
+	    android:text="Unlock NDEF File" />
+
+    
+
+	<RelativeLayout
+	    android:id="@+id/MnfWriteBtnAreaId"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+		android:layout_marginRight="@dimen/mnf_frag_write_btn_right_margin"
+		android:layout_marginBottom="@dimen/mnf_frag_write_btn_bottom_margin" >
+	    
+	    <include layout="@layout/view_basic_button" />
+
+	</RelativeLayout>
+	
+	<RelativeLayout
+		    android:id="@+id/MnfNDEFDescrFileFragIDFileLayout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" 
+		    android:layout_above="@id/MnfWriteBtnAreaId">
+  		<View
+       android:id="@+id/MnfNDEFDescrSplitLine_hor1"
+       android:layout_width="match_parent"
+       android:layout_height= "2dp"
+       android:background="@color/gray"
+       android:layout_marginBottom="@dimen/all_act_tab_top_margin"
+       />
+  		
+		<TextView
+    	    android:id="@+id/MnfNDEFDescrFileFileIDSelectLabel"
+        	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="2dp"
+		    android:layout_marginBottom="2dp"
+        	android:typeface="serif"
+    	    android:textSize="@dimen/ti_act_add_txt_field_size"
+    	    android:text="Select File ID:"
+    	    android:layout_below="@id/SplitLine_hor1"/>
+	
+		
+		<RadioGroup 
+		   	android:id="@+id/MnfNDEFDescrRadiogroupIDFileLayout"
+		    android:layout_width="fill_parent"   		     
+            android:layout_height="wrap_content"           
+            android:orientation="horizontal"         
+            android:checkedButton="@+id/FileID1"
+            android:layout_below="@id/MnfNDEFDescrFileFileIDSelectLabel"> 
+ 				    
+			<RadioButton android:id="@+id/MnfNDEFDescrFileID1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="1"
+        	android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:layout_margin="0dp"
+        	android:padding ="0dp"/>
+			
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID1"
+	        android:text="2"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    	
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID2"
+	        android:text="3"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    	
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID3"
+			android:text="4"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    	
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID4"
+	        android:text="5"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    	
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID5"
+	        android:text="6"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    	
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID7"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID6"
+	        android:text="7"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    	
+	    	<RadioButton android:id="@+id/MnfNDEFDescrFileID8"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/MnfNDEFDescrFileID7"
+	        android:text="8"
+	        android:button="@null"
+        	android:drawableBottom="@android:drawable/btn_radio"
+        	android:gravity="center"
+        	android:padding ="0dp"/>
+	    		    	
+	        </RadioGroup>
+	        
+
+			
+	</RelativeLayout>
+	
+	    <ScrollView
+	    android:id="@+id/MnfNDEFDescrScrollViewId"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="match_parent"
+    	android:layout_below="@id/MnfTagHeaderFragmentId"
+    	android:layout_above="@id/MnfNDEFDescrFileFragIDFileLayout"
+	    android:layout_marginTop="@dimen/ti_act_add_txt_top_margin"
+	    android:layout_marginBottom="@dimen/ti_act_add_txt_top_margin" >
+        
+	    <LinearLayout
+	        android:id="@+id/MnfNDEFDescrContainerId"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	    </LinearLayout>
+	</ScrollView>
+
+</RelativeLayout>

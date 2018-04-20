@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TagHeaderFragmentId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    tools:context=".TagHeaderFragment" >
+
+	<TextView
+ 		android:id="@+id/TagHeaderModelTxtId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:typeface="serif"
+		android:textStyle="bold"
+		android:layout_marginTop="@dimen/tag_header_txt_top_margin"
+		android:text="@string/tag_header_default_model_txt"
+		android:textSize="@dimen/tag_header_model_txt_size" />
+
+	<TextView
+		android:id="@+id/TagHeaderAddDescTxtId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:typeface="serif"
+		android:layout_below="@+id/TagHeaderModelTxtId"
+		android:text="@string/tag_header_default_add_desc_txt"
+		android:textSize="@dimen/tag_header_add_desc_txt_size" />
+
+	<TextView
+		android:id="@+id/TagHeaderTagTypeTxtId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:typeface="serif"
+		android:layout_below="@+id/TagHeaderAddDescTxtId"
+		android:text="@string/tag_header_default_tag_type_txt"
+		android:textSize="@dimen/tag_header_tag_type_txt_size" />
+
+	<TextView
+ 		android:id="@+id/TagHeaderTailId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/TagHeaderTagTypeTxtId"
+		android:layout_marginTop="@dimen/tag_header_tail_top_margin"
+		android:text="@string/tag_header_tail_txt"
+		android:textSize="@dimen/tag_header_tail_size" />
+
+</RelativeLayout>
