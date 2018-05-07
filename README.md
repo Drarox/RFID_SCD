@@ -1,1 +1,1 @@
-Application Android pour faire une röcolement de livres équiper de puce rdif.
+Application Android pour faire un récolement de livres équiper de puce rdif.

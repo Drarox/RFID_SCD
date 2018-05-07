@@ -1,6 +1,4 @@
-
 package com.st.provider;
-
 
 import com.st.provider.SharedInformation.Livre;
 
@@ -61,6 +59,7 @@ public class AndroidProvider extends ContentProvider {
 		return AndroidProvider.CONTENT_PROVIDER_MIME;
 	}
 
+	//Récupération de l'id de l'uri
 	private long getId(Uri uri) {
 		String lastPathSegment = uri.getLastPathSegment();
 		if (lastPathSegment != null) {
@@ -73,9 +72,7 @@ public class AndroidProvider extends ContentProvider {
 		return -1;
 	}
 
-	/**
-	 * Insert a value
-	 */
+	//Insérer une donnée
 	@Override
 	public Uri insert(Uri uri, ContentValues values) {
 		SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -97,9 +94,7 @@ public class AndroidProvider extends ContentProvider {
 		}
 	}
 
-	/**
-	 * update a value
-	 */
+	//Mettre à jour une donnée
 	@Override
 	public int update(Uri uri, ContentValues values, String selection,
 			String[] selectionArgs) {
@@ -120,6 +115,7 @@ public class AndroidProvider extends ContentProvider {
 		}
 	}
 
+	//Supprimer une donnée
 	@Override
 	public int delete(Uri uri, String selection, String[] selectionArgs) {
 		long id = getId(uri);
@@ -138,6 +134,7 @@ public class AndroidProvider extends ContentProvider {
 		}
 	}
 
+	//Récupérer une donnée
 	@Override
 	public Cursor query(Uri uri, String[] projection, String selection,
 			String[] selectionArgs, String sortOrder) {

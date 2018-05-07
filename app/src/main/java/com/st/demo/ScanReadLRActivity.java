@@ -93,8 +93,8 @@ public class ScanReadLRActivity extends FragmentActivity
     String codeLivre = null;
 
     private TCPClient mTcpClient;
-    String adresseIp = "192.168.137.1";
-    int portTcp      = 2502;
+    String adresseIp = "192.168.137.1"; //ip du serveur socket
+    int portTcp      = 2502; //port socket
 
     final Handler handler = new Handler();
     final Handler handlerRead = new Handler();
@@ -125,6 +125,7 @@ public class ScanReadLRActivity extends FragmentActivity
 
         new connectTask().execute("");
 
+        //detection wifi
         String getSSID = getWifiName(getApplicationContext());
         String testSSID = "\"RFID_SCD\"";
         if (getSSID != null) {
@@ -137,10 +138,8 @@ public class ScanReadLRActivity extends FragmentActivity
         else
             imageWifi.setImageResource(R.drawable.wifioff);
 
-        // new timer
+        // new timer detection wifi
         Timer timer = new Timer();
-
-        // schedule timer
         timer.scheduleAtFixedRate(myTimerTask, 200, 200);
 
         success = MediaPlayer.create(this, R.raw.success);
@@ -175,13 +174,13 @@ public class ScanReadLRActivity extends FragmentActivity
             }
 
             @Override
-            public void afterTextChanged(Editable s) {
+            public void afterTextChanged(Editable s) { //lorsque que le text est actualisé
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try  {
                             String trame = textFrom.getText().toString() + " - " + lecture + " - ";
-                            EnvoiMessage(trame);
+                            EnvoiMessage(trame); //envoi tcp
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -195,7 +194,7 @@ public class ScanReadLRActivity extends FragmentActivity
         buttonCo.setOnClickListener(new OnClickListener() //Lors du click sur bouton
         {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //button co
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 new connectTask().execute("");
 
@@ -216,7 +215,7 @@ public class ScanReadLRActivity extends FragmentActivity
         imageWifi.setOnClickListener(new OnClickListener() //Lors du click sur bouton
         {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //clique sur image wifi
                 new connectTask().execute("");
                 String getSSID = getWifiName(getApplicationContext());
                 String testSSID = "\"RFID_SCD\"";
@@ -240,6 +239,7 @@ public class ScanReadLRActivity extends FragmentActivity
                 // TODO Auto-generated method stub
 
                 try {
+                    //new timer pour lecture en boucle
                     Timer timerRead = new Timer();
                     timerRead.scheduleAtFixedRate(TimerRead, 600, 600);
 
@@ -317,6 +317,7 @@ public class ScanReadLRActivity extends FragmentActivity
         mAdapter.enableForegroundDispatch(this, mPendingIntent, mFilters, mTechLists);
         new connectTask().execute("");
 
+        //detection wifi
         String getSSID = getWifiName(getApplicationContext());
         String testSSID = "\"RFID_SCD\"";
         if (getSSID != null) {
@@ -344,7 +345,7 @@ public class ScanReadLRActivity extends FragmentActivity
         super.onDestroy();
     }
 
-
+//paramètrage lecture nfc
 private void processPreExecute (String memorySize) {
       startAddressString = "0000";
       startAddressString = Helper.castHexKeyboard(startAddressString);
@@ -354,42 +355,25 @@ private void processPreExecute (String memorySize) {
       sNbOfBlock = "0008"; //lecture de 8 blocs
       sNbOfBlock = Helper.FormatStringNbBlockInteger(sNbOfBlock, startAddressString ,memorySize);
       numberOfBlockToRead = Helper.ConvertIntTo2bytesHexaFormat(Integer.parseInt(sNbOfBlock));
-
-
 }
 
-//Ecriture dans liste après formatage
-private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données raw en entré dans un tableau
+//Formatage pour récup code puis écriture
+private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données hexa dans un tableau
     nbblocks = Integer.parseInt(sNbOfBlock); // ici 8
-    if (ReadMultipleBlockAnswer != null && ReadMultipleBlockAnswer.length - 1 > 0) // si donn2es non null et > 0
+    if (ReadMultipleBlockAnswer != null && ReadMultipleBlockAnswer.length - 1 > 0) // si données non null et > 0
     {
         if (ReadMultipleBlockAnswer[0] == 0x00) // si premier octect a 00
         {
-            String value = new String(ReadMultipleBlockAnswer, 0, 33);
-            codeLivre = value.substring(22);
-            textFrom.setText(codeLivre);
+            String value = new String(ReadMultipleBlockAnswer, 0, 33); //formatage ascii vers string
+            codeLivre = value.substring(22); //récup code barre
+            textFrom.setText(codeLivre); //écritue du code barre
             displayContentProvider();
-
-            catBlocks = Helper.buildArrayBlocks(addressStart, nbblocks); //nom des blocs sur nbblocks lignes
-            catValueBlocks = Helper.buildArrayValueBlocks(ReadMultipleBlockAnswer, nbblocks); // met tous les données dans un tableau 4 colones et nbblocks lignes
-
-            listOfData = new ArrayList<DataRead>();
-            for (int i = 0; i < nbblocks; i++)
-            {
-                listOfData.add(new DataRead(catBlocks[i], catValueBlocks[i]));
-            }
-            DataReadAdapter adapter = new DataReadAdapter(getApplicationContext(), listOfData);
         }
-        else // added to erase screen in case of read fail
-        { }
     }
-    else    // added to erase screen in case of read fail
-    {   }
-
 }
 
 
-    //lecture provider
+    //lecture provider et affichage des infos
     private void displayContentProvider() {
         String columns[] = new String[] { Livre.ID, Livre.CODEBARRE, Livre.TITRE, Livre.RECOLEMENT };
         Uri mContacts = AndroidProvider.CONTENT_URI;
@@ -405,7 +389,7 @@ private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données ra
             annee.setText("");
             annee2.setText("");
             error.start();
-            lecture = "Livre non trouvé";
+            lecture = "Livre non trouvé"; //pour trame
         }
 
         if (cur.moveToFirst()) { //si livre trouvé
@@ -438,9 +422,9 @@ private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données ra
                     ContentValues values = new ContentValues();
                     values.put(Livre.RECOLEMENT, "OK");
                     String id = cur.getString(cur.getColumnIndex(Livre.ID));
-                    long noUpdated = getContentResolver().update(mContacts,values,Livre.ID+"=?",new String[] {String.valueOf(id)}); //id is the id of the row you wan to update
+                    long noUpdated = getContentResolver().update(mContacts,values,Livre.ID+"=?",new String[] {String.valueOf(id)}); //Mise à jour provider si livre trouvé
 
-                    lecture = desc;
+                    lecture = desc; //pour trame
                 }
                 success.start();
             } while (cur.moveToNext());
@@ -504,6 +488,7 @@ private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données ra
         }
     }
 
+    //récup le nom du wifi
     public String getWifiName(Context context) {
         WifiManager manager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         if (manager.isWifiEnabled()) {
@@ -518,6 +503,7 @@ private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données ra
         return null;
     }
 
+    //Detecter wifi
     TimerTask myTimerTask = new TimerTask() {
         @Override
         public void run() {
@@ -541,6 +527,7 @@ private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données ra
         }
     };
 
+    //Scan en boucle
     TimerTask TimerRead = new TimerTask() {
         @Override
         public void run() {
@@ -550,17 +537,18 @@ private void processPostExecute (byte[] ReadMultipleBlockAnswer) { //données ra
                 public void run() {
 
                     try {
+                        new connectTask().execute("");
                         NFCApplication currentApp = NFCApplication.getApplication();
-                        NFCTag currentTag = currentApp.getCurrentTag();
+                        NFCTag currentTag = currentApp.getCurrentTag(); //Récup du tag
                         if (currentTag.getSYSHandler() instanceof SysFileLRHandler) {
                             SysFileLRHandler sysHDL = (SysFileLRHandler) (currentTag.getSYSHandler());
                             if (sysHDL.getMemorySize() != null) {
-                                String tmpmemsize = sysHDL.getMemorySize();
-                                processPreExecute(sysHDL.getMemorySize());
-                                stnfcm24LRBasicOperation bop = new stnfcm24LRBasicOperation(sysHDL.getMaxTransceiveLength());
+                                String tmpmemsize = sysHDL.getMemorySize(); //Récup la taille
+                                processPreExecute(sysHDL.getMemorySize()); //Réduit à la taille souhaiter
+                                stnfcm24LRBasicOperation bop = new stnfcm24LRBasicOperation(sysHDL.getMaxTransceiveLength()); //Récup la mémoire
                                 if (bop.m24LRReadBasicOp(addressStart, numberOfBlockToRead, tmpmemsize) == 0) {
                                     // ok
-                                    processPostExecute(bop.getReadMultipleBlockAnswer()); //Extrait les données raw de bop
+                                    processPostExecute(bop.getReadMultipleBlockAnswer()); //Formatage de la mémoire
                                 } else {
                                     // ko
                                     processPostExecute(null);

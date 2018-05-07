@@ -39,8 +39,6 @@ import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.util.Log;
 
-import com.st.NDEFUI.NDEFSimplifiedMessageFragment;
-
 
 public class NDEFMultipleRecordMessage extends NDEFSimplifiedMessage {
 
